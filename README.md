@@ -4,6 +4,9 @@
 
 ## Get Started
 **Must have Node and Yarn(v1.22.19) installed to setup locally**
+```sh
+git switch sudhir
+```
 
 ```sh
 yarn
