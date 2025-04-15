@@ -31,6 +31,7 @@ universal-app-starter
 └── packages
     ├── ui 
     └── app
+    └── utils 
 ```
 ### Apps and Packages
 
@@ -38,6 +39,7 @@ universal-app-starter
 - `apps/web`: a [Next.js](https://nextjs.org/) app built with [react-native-web](https://necolas.github.io/react-native-web/)
 - `packages/ui`: a shared package that contains shared UI components between `web` and `native` applications
 - `packages/app`: a shared package that contains shared logic between `web` and `native` applications
+- `packages/utils`: a shared package that contains shared logic between `web` and `native` applications to generated data of  products.
 
 ### Technologies
 
