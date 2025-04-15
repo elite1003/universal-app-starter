@@ -1,6 +1,6 @@
 # Universal App Starter
 
-<img width="1725" alt="Universal App Starter Screenshot" src="https://github.com/adebayoileri/rnw-starter-private/assets/46798106/a7343cd0-81f6-4e99-9dc3-deac09c95fac">
+<img width="1725" alt="Trade with us " src="https://github.com/elite1003/universal-app-starter/blob/sudhir/Screenshot-2025-04-16-03-57-20-6.JPG">
 
 ## Get Started
 **Must have Node and Yarn(v1.22.19) installed to setup locally**
