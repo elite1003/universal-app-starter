@@ -1,4 +1,3 @@
-// components/CarouselDots.tsx
 import React from "react";
 import { View } from "ui/view";
 

@@ -7,6 +7,8 @@ import Animated, {
   useAnimatedScrollHandler,
   useSharedValue,
   useAnimatedRef,
+  useDerivedValue,
+  runOnJS,
 } from "react-native-reanimated";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
@@ -50,24 +52,21 @@ export function CompanyDetail() {
     }
   }, []);
 
+  useDerivedValue(() => {
+    const index = Math.round(scrollX.value / SCREEN_WIDTH);
+    runOnJS(setActiveIndex)(index);
+  }, [scrollX]);
+
   const scrollHandler = useAnimatedScrollHandler({
     onScroll: (event: { contentOffset: { x: number } }) => {
       scrollX.value = event.contentOffset.x;
     },
   });
 
-  const getItemLayout = useCallback(
-    (data: Company[] | null | undefined, index: number) => ({
-      length: SCREEN_WIDTH,
-      offset: SCREEN_WIDTH * index,
-      index,
-    }),
-    [],
-  );
-
   return (
     <GestureHandlerRootView className="flex-1">
       <View className="flex-1">
+        {/* tabbar */}
         <View className="pl-2 bg-white ">
           <TabBar
             tabs={tabs}
@@ -75,6 +74,7 @@ export function CompanyDetail() {
             onTabPress={handleTabPress}
           />
         </View>
+        {/* sidebar with flatlist */}
         <Animated.FlatList<Company>
           ref={flatListRef}
           data={companies}
@@ -109,12 +109,6 @@ export function CompanyDetail() {
           windowSize={5}
           maxToRenderPerBatch={3}
           updateCellsBatchingPeriod={50}
-          onMomentumScrollEnd={(event) => {
-            const index = Math.round(
-              event.nativeEvent.contentOffset.x / SCREEN_WIDTH,
-            );
-            setActiveIndex(index);
-          }}
         />
       </View>
     </GestureHandlerRootView>
