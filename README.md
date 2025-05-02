@@ -1,10 +1,14 @@
-# Universal App Starter
+# Trade with us
 
-<img width="1725" alt="Universal App Starter Screenshot" src="https://github.com/adebayoileri/rnw-starter-private/assets/46798106/a7343cd0-81f6-4e99-9dc3-deac09c95fac">
+<img width="1725" alt="Trade with us " src="https://github.com/elite1003/universal-app-starter/blob/sudhir/Screenshot-2025-04-16-03-57-20-6.JPG">
 
 ## Get Started
 
 **Must have Node and Yarn(v1.22.19) installed to setup locally**
+
+```sh
+git switch sudhir
+```
 
 ```sh
 yarn
@@ -34,7 +38,7 @@ universal-app-starter
 └── packages
     ├── ui
     └── app
-
+    └── utils
 ```
 
 ### Apps and Packages
@@ -43,6 +47,7 @@ universal-app-starter
 - `apps/web`: a [Next.js](https://nextjs.org/) app built with [react-native-web](https://necolas.github.io/react-native-web/)
 - `packages/ui`: a shared package that contains shared UI components between `web` and `native` applications
 - `packages/app`: a shared package that contains shared logic between `web` and `native` applications
+- `packages/utils`: a shared package that contains shared logic between `web` and `native` applications to generated data of products.
 
 ### Technologies
 
